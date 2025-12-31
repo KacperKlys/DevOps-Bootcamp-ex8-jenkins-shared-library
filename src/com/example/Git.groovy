@@ -23,7 +23,7 @@ class Git implements Serializable{
 
     def push(String branch, String msg) {
         script.sh 'git add app/package.json'
-        script.sh "git commit -m $msg"
+        script.sh "git commit -m '$msg'"
         script.sh "git push origin HEAD:$branch"
     }
 }
